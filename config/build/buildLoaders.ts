@@ -11,6 +11,20 @@ export default function buildLoaders(
     exclude: /node_modules/,
   };
 
+  const svgLoader = {
+    test: /\.svg$/,
+    use: ["@svgr/webpack"],
+  };
+
+  const fileLoader = {
+    test: /\.(png|jpe?g|gif|woff2|woff)$/i,
+    use: [
+      {
+        loader: "file-loader",
+      },
+    ],
+  };
+
   const cssLoader = {
     test: /\.s[ac]ss$/i,
     use: [
@@ -23,12 +37,12 @@ export default function buildLoaders(
             localIdentName: options.isDev
               ? "[path][name]__[local]"
               : "[hash:base64:8]",
-          }
+          },
         },
       },
       "sass-loader",
     ],
   };
 
-  return [typescriptLoader, cssLoader];
+  return [typescriptLoader, svgLoader, fileLoader, cssLoader];
 }
