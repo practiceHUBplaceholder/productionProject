@@ -15,3 +15,11 @@
 .pink {
     border: 2px solid pink
 }
+
+.content-page {
+    display: flex;
+}
+
+.page-wrapper {
+    flex-grow: 1;
+}

@@ -1,4 +1,4 @@
-import cls from "./ThemeSwitcher.module.scss";
+import cls from "./ThemezSwitcher.module.scss";
 
 import { Theme, useTheme } from "app/providers/ThemeProvider";
 import { FC } from "react";
