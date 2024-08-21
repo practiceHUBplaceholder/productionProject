@@ -1,5 +1,8 @@
 {
   "Main": "Main",
   "About": "About",
-  "Language": "English"
+  "Language": "English",
+  "Open": "Open",
+  "Close": "Close",
+  "Loading": "Loading..."
 }

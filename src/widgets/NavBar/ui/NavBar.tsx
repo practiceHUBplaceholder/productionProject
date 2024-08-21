@@ -9,7 +9,7 @@ interface NavBarProps {
 }
 
 export const NavBar: FC<NavBarProps> = ({ className }) => {
-    const { t } = useTranslation();
+    const { t } = useTranslation('translation');
 
     return (
         <div className={ClassNames(cls.Navbar, {}, [className])}>
@@ -17,6 +17,7 @@ export const NavBar: FC<NavBarProps> = ({ className }) => {
                 <AppLink to="/" theme={AppLinkTheme.SECONDARY} className={cls.mainLink}>
                     {t('Main')}
                 </AppLink>
+                {/* eslint-disable-next-line i18next/no-literal-string */}
                 <AppLink to="/about" theme={AppLinkTheme.SECONDARY}>
                     {t('About')}
                 </AppLink>
