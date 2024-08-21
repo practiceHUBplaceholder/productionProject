@@ -1,7 +1,14 @@
 {
+  "": "",
   "About": "About",
   "About us": "About us",
+  "About-u": "About-u",
+  "About-us": "About-us",
   "Language": "Language",
   "Main": "Main",
-  "Main page": "Main page"
+  "Main page": "Main page",
+  "Main-page": "Main-page",
+  "about": {
+    "About-us": "About-us"
+  }
 }
