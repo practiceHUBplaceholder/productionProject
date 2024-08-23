@@ -33,6 +33,7 @@ module.exports = {
         'import/no-extraneous-dependencies': 'warn',
         'no-underscore-dangle': 'off',
         'react/jsx-props-no-spreading': 'off',
+        'max-len': ['error', { ignoreComments: true, code: 100 }],
         'comma-dangle': [
             'warn',
             {
