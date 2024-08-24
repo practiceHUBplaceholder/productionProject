@@ -10,11 +10,17 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
-    "paths": { "*": ["./src/*"] }
+    "paths": {
+      "*": [
+        "./src/*"
+      ]
+    }
   },
   "ts-node": {
     "compilerOptions": {
-      "module": "CommonJS"
+      "module": "CommonJS",
+      "jsx": "react-jsx"
     }
-  }
+  },
+
 }

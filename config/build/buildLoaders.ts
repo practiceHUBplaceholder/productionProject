@@ -13,6 +13,7 @@ export default function buildLoaders(
 
     const svgLoader = {
         test: /\.svg$/,
+        issuer: /\.[jt]sx?$/,
         use: ['@svgr/webpack'],
     };
 
