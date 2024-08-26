@@ -10,5 +10,6 @@ export default function buildResolvers(
         modules: [options.paths.src, 'node_modules'],
         alias: {},
         mainFiles: ['index'],
+        symlinks: false,
     };
 }
