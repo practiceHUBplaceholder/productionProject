@@ -5,7 +5,7 @@ import { AppRouter } from 'app/providers/router';
 import { Suspense } from 'react';
 import { ClassNames } from 'shared/lib/classNames/classNames';
 import { Navbar } from 'widgets/Navbar';
-import { Sidebar } from 'widgets/Sidebar/ui/Sidebar/Sidebar';
+import { Sidebar } from 'widgets/Sidebar';
 
 const App = () => {
     const { theme } = useTheme();
