@@ -4,13 +4,13 @@ import { LangSwitcher } from 'shared/ui/LangSwitcher';
 import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher';
 import { Button, ThemeButton } from 'shared/ui/Button/Button';
 import { useTranslation } from 'react-i18next';
-import cls from './SideBar.module.scss';
+import cls from './Sidebar.module.scss';
 
-interface SideBarProps {
+interface SidebarProps {
   className?: string;
 }
 
-export const SideBar: FC<SideBarProps> = ({ className }) => {
+export const Sidebar: FC<SidebarProps> = ({ className }) => {
     const [collapsed, setCollapsed] = useState(true);
     const { t } = useTranslation('translation');
 
@@ -19,16 +19,16 @@ export const SideBar: FC<SideBarProps> = ({ className }) => {
     };
     return (
         <div
-            className={ClassNames(cls.SideBar, { [cls.collapsed]: collapsed }, [
+            className={ClassNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [
                 className,
             ])}
-            data-testid="sidebar"
+            data-testid="Sidebar"
         >
             <Button
                 onClick={onToggle}
                 className={cls.toggle}
                 theme={ThemeButton.CLEAR}
-                data-testid="sidebar-toggle"
+                data-testid="Sidebar-toggle"
             >
                 {collapsed ? t('Open') : t('Close')}
             </Button>

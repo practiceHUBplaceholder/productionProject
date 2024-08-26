@@ -1,5 +1,12 @@
 {
+  "About": "About",
+  "About-us": "About-us",
   "Close": "",
   "Language": "",
-  "Open": ""
+  "Main": "Main",
+  "Main-page": "Main-page",
+  "Open": "",
+  "Page-not-found": "Page-not-found",
+  "Refresh-page": "Refresh-page",
+  "Unexpected-error": "Unexpected-error"
 }

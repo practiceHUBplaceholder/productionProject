@@ -2,13 +2,13 @@ import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ClassNames } from 'shared/lib/classNames/classNames';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
-import cls from './NavBar.module.scss';
+import cls from './Navbar.module.scss';
 
-interface NavBarProps {
+interface NavbarProps {
   className?: string;
 }
 
-export const NavBar: FC<NavBarProps> = ({ className }) => {
+export const Navbar: FC<NavbarProps> = ({ className }) => {
     const { t } = useTranslation('translation');
 
     return (
@@ -17,7 +17,6 @@ export const NavBar: FC<NavBarProps> = ({ className }) => {
                 <AppLink to="/" theme={AppLinkTheme.SECONDARY} className={cls.mainLink}>
                     {t('Main')}
                 </AppLink>
-                {/* eslint-disable-next-line i18next/no-literal-string */}
                 <AppLink to="/about" theme={AppLinkTheme.SECONDARY}>
                     {t('About')}
                 </AppLink>
