@@ -12,6 +12,9 @@ export default function buildWebpackConfig(
     const { mode, paths, isDev } = options;
 
     return {
+        stats: {
+            errorDetails: true,
+        },
         mode,
         entry: paths.entry,
         output: {
