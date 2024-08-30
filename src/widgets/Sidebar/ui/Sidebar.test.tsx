@@ -5,13 +5,13 @@ import { Sidebar } from './Sidebar';
 describe('Sidebar test', () => {
     test('Sidebar rendered', () => {
         renderWithTranslation(<Sidebar />);
-        expect(screen.getByTestId('sidebar')).toBeInTheDocument();
+        expect(screen.getByTestId('Sidebar')).toBeInTheDocument();
     });
     test('Toggle works correctly', () => {
         renderWithTranslation(<Sidebar />);
-        const ToggleButton = screen.getByTestId('sidebar-toggle');
-        expect(screen.getByTestId('sidebar')).toHaveClass('collapsed');
+        const ToggleButton = screen.getByTestId('Sidebar-toggle');
+        expect(screen.getByTestId('Sidebar')).toHaveClass('collapsed');
         fireEvent.click(ToggleButton);
-        expect(screen.getByTestId('sidebar')).not.toHaveClass('collapsed');
+        expect(screen.getByTestId('Sidebar')).not.toHaveClass('collapsed');
     });
 });
