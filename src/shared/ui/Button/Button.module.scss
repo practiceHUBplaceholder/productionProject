@@ -24,3 +24,39 @@
     color: var(--primary-color);
     background: none;
 }
+
+.small {
+    font: var(--font-s);
+}
+
+.medium {
+    font: var(--font-m);
+}
+
+.large {
+    font: var(--font-l);
+}
+
+.Xlarge {
+    font: var(--font-xl);
+}
+
+.square.small {
+    width: var(--font-size-s);
+    height: var(--font-size-s);
+}
+
+.square.medium {
+    width: var(--font-size-m);
+    height: var(--font-size-m);
+}
+
+.square.large {
+    width: var(--font-size-l);
+    height: var(--font-size-l);
+}
+
+.square.Xlarge {
+    width: var(--font-size-xl);
+    height: var(--font-size-xl);
+}

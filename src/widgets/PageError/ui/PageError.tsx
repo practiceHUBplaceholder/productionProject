@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ClassNames } from 'shared/lib/classNames/classNames';
-import { Button, ThemeButton } from 'shared/ui/Button/Button';
+import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { useTheme } from 'app/providers/ThemeProvider';
 import cls from './PageError.module.scss';
 
@@ -23,7 +23,7 @@ export const PageError:FC<PageErrorProps> = ({ className }) => {
             <p>
                 {t('Unexpected-error')}
             </p>
-            <Button onClick={reloadPage} theme={ThemeButton.CLEAR} className={cls.error_button}>
+            <Button onClick={reloadPage} theme={ButtonTheme.CLEAR} className={cls.error_button}>
                 {t('Refresh-page')}
             </Button>
         </div>
