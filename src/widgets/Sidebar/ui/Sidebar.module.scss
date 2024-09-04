@@ -26,14 +26,14 @@
     height: 30px;
 }
 
+.icon {
+    fill: var(--inverted-primary-color);
+}
+
 .link {
     opacity: 1;
     transition: opacity 0.2s, visibility 0.2s;
     white-space: nowrap;
-}
-
-.icon {
-    fill: var(--inverted-secondary-color);
 }
 
 .switchers {
@@ -51,6 +51,11 @@
     font-size: var(--font-size-xl);
 }
 
+.toggle:focus {
+    color: var(--secondary-color);
+    outline: none;
+}
+
 .collapsed {
     width: var(--sidebar-width-collapsed);
 
@@ -59,4 +64,18 @@
         visibility: hidden;
         width: 0;
     }
+}
+
+.item:focus .icon {
+    fill: var(--inverted-secondary-color);
+}
+
+.item:focus {
+    outline: none;
+    color: var(--inverted-secondary-color);
+}
+
+.themeSwitcher:focus {
+    outline: none;
+    filter: drop-shadow(0 0 10px var(--bg-color));
 }

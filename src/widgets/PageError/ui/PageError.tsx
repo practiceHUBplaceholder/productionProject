@@ -23,7 +23,7 @@ export const PageError:FC<PageErrorProps> = ({ className }) => {
             <p>
                 {t('Unexpected-error')}
             </p>
-            <Button onClick={reloadPage} theme={ButtonTheme.CLEAR} className={cls.error_button}>
+            <Button onClick={reloadPage} theme={ButtonTheme.FUNKY}>
                 {t('Refresh-page')}
             </Button>
         </div>

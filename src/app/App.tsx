@@ -1,5 +1,3 @@
-import './styles/index.scss';
-
 import { useTheme } from 'app/providers/ThemeProvider';
 import { AppRouter } from 'app/providers/router';
 import { Suspense } from 'react';
@@ -9,6 +7,7 @@ import { Sidebar } from 'widgets/Sidebar';
 
 const App = () => {
     const { theme } = useTheme();
+
     return (
         <div className={ClassNames('app', {}, [theme])}>
             <Suspense fallback="">

@@ -49,8 +49,8 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
                 </AppLink>
             </div>
             <div className={cls.switchers}>
-                <LangSwitcher />
-                <ThemeSwitcher />
+                <LangSwitcher className={cls.langSwitcher} />
+                <ThemeSwitcher className={cls.themeSwitcher} />
             </div>
         </div>
     );

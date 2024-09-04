@@ -1,6 +1,11 @@
 .Button {
     cursor: pointer;
-    color: var(--inverted-primary-color);
+    color: var(--primary-color);
+}
+
+.Button:focus {
+    color: var(--secondary-color);
+    outline: none;
 }
 
 .clear {
@@ -8,18 +13,18 @@
     padding: 0;
     border: none;
     background-color: transparent;
-    outline: none;
 }
 
 .funky {
     border: 3px solid var(--inverted-secondary-color);
     border-radius: 8px;
     padding: 4px;
+    color: var(--inverted-primary-color);
     background: var(--inverted-bg-color);
 }
 
 .outline {
-    padding: 10px 15px;
+    padding: 4px 12px;
     border: 1px solid var(--primary-color);
     color: var(--primary-color);
     background: none;
@@ -59,4 +64,44 @@
 .square.Xlarge {
     width: var(--font-size-xl);
     height: var(--font-size-xl);
+}
+
+.primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+
+    &:focus {
+        color: var(--secondary-color);
+        border-color: var(--secondary-color);
+    }
+}
+
+.secondary {
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+
+    &:focus {
+        color: var(--inverted-secondary-color);
+        border-color: var(--inverted-secondary-color);
+    }
+}
+
+.primaryInverted {
+    color: var(--inverted-primary-color);
+    border-color: var(--inverted-primary-color);
+
+    &:focus {
+        color: var(--inverted-secondary-color);
+        border-color: var(--inverted-secondary-color);
+    }
+}
+
+.secondaryInverted {
+    color: var(--inverted-secondary-color);
+    border-color: var(--inverted-secondary-color);
+
+    &:focus {
+        color: var(--secondary-color);
+        border-color: var(--secondary-color);
+    }
 }

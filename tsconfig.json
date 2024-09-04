@@ -14,7 +14,12 @@
       "*": [
         "./src/*"
       ]
-    }
+    },
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
   },
   "ts-node": {
     "compilerOptions": {
@@ -27,6 +32,4 @@
     "./src/**/*.ts",
     "./src/**/*.tsx",
   ],
-  
-
 }

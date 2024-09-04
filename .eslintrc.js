@@ -4,16 +4,14 @@ module.exports = {
         es2021: true,
         jest: true,
     },
-    extends: ['plugin:react/recommended', 'airbnb', 'plugin:i18next/recommended', 'plugin:storybook/recommended'],
+    extends: ['plugin:react/recommended', 'airbnb', 'plugin:i18next/recommended',
+        'plugin:storybook/recommended'],
     parser: '@typescript-eslint/parser',
     parserOptions: {
-        ecmaFeatures: {
-            jsx: true,
-        },
         ecmaVersion: 'latest',
         sourceType: 'module',
     },
-    plugins: ['react', '@typescript-eslint', 'i18next'],
+    plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks'],
     rules: {
         'react/jsx-indent': [2, 4],
         'react/jsx-indent-props': [2, 4],
@@ -45,15 +43,21 @@ module.exports = {
         'i18next/no-literal-string': ['error', {
             markupOnly: true, ignoreAttribute: ['data-testid', 'to'],
         }],
+        'react-hooks/rules-of-hooks': 'error',
+        'react-hooks/exhaustive-deps': 'error',
+
     },
     globals: {
         __IS__DEV__: true,
     },
     overrides: [
         {
-            files: ['**/src/**/*.test.{ts,tsx}'],
+            files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
             rules: {
                 'i18next/no-literal-string': 'off',
+                'no-script-url': 'off',
+                'jsx-a11y/anchor-is-valid': 'off',
+                'react/jsx-no-script-url': 'off',
             },
         },
     ],

@@ -2,7 +2,9 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
-import { Button, ButtonSize, ButtonTheme } from './Button';
+import {
+    Button, ButtonSize, ButtonTheme, ButtonColor
+} from './Button';
 
 const meta: Meta<typeof Button> = {
     title: 'shared/Button',
@@ -11,19 +13,6 @@ const meta: Meta<typeof Button> = {
 
 export default meta;
 type Story = StoryObj<typeof Button>;
-
-export const Default: Story = {
-    args: {
-        children: 'Test',
-    },
-};
-
-export const DefaultDark: Story = {
-    args: {
-        children: 'Test',
-    },
-    decorators: [ThemeDecorator(Theme.DARK)],
-};
 
 export const Clear: Story = {
     args: {
@@ -78,30 +67,12 @@ export const SquareSmall: Story = {
     },
 };
 
-export const SquareSmallDark: Story = {
-    args: {
-        children: 'Test',
-        square: true,
-        size: ButtonSize.S,
-    },
-    decorators: [ThemeDecorator(Theme.DARK)],
-};
-
 export const SquareMedium: Story = {
     args: {
         children: 'Test',
         square: true,
         size: ButtonSize.M,
     },
-};
-
-export const SquareMediumDark: Story = {
-    args: {
-        children: 'Test',
-        square: true,
-        size: ButtonSize.M,
-    },
-    decorators: [ThemeDecorator(Theme.DARK)],
 };
 
 export const SquareLarge: Story = {
@@ -112,15 +83,6 @@ export const SquareLarge: Story = {
     },
 };
 
-export const SquareLargeDark: Story = {
-    args: {
-        children: 'Test',
-        square: true,
-        size: ButtonSize.L,
-    },
-    decorators: [ThemeDecorator(Theme.DARK)],
-};
-
 export const SquareXLarge: Story = {
     args: {
         children: 'Test',
@@ -129,11 +91,62 @@ export const SquareXLarge: Story = {
     },
 };
 
-export const SquareXLargeDark: Story = {
+export const Primary: Story = {
     args: {
         children: 'Test',
-        square: true,
-        size: ButtonSize.XL,
+        color: ButtonColor.PRIMARY,
+    },
+};
+
+export const PrimaryDark: Story = {
+    args: {
+        children: 'Test',
+        color: ButtonColor.PRIMARY,
+    },
+    decorators: [ThemeDecorator(Theme.DARK)],
+};
+
+export const Secondary: Story = {
+    args: {
+        children: 'Test',
+        color: ButtonColor.SECONDARY,
+    },
+};
+
+export const SecondaryDark: Story = {
+    args: {
+        children: 'Test',
+        color: ButtonColor.SECONDARY,
+    },
+    decorators: [ThemeDecorator(Theme.DARK)],
+};
+
+export const PrimaryInverted: Story = {
+    args: {
+        children: 'Test',
+        color: ButtonColor.PRIMARY_INVERTED,
+    },
+};
+
+export const PrimaryInvertedDark: Story = {
+    args: {
+        children: 'Test',
+        color: ButtonColor.PRIMARY_INVERTED,
+    },
+    decorators: [ThemeDecorator(Theme.DARK)],
+};
+
+export const SecondaryInverted: Story = {
+    args: {
+        children: 'Test',
+        color: ButtonColor.SECONDARY_INVERTED,
+    },
+};
+
+export const SecondaryInvertedDark: Story = {
+    args: {
+        children: 'Test',
+        color: ButtonColor.SECONDARY_INVERTED,
     },
     decorators: [ThemeDecorator(Theme.DARK)],
 };
