@@ -16,10 +16,10 @@ export const Light: Story = {
     args: {
         isOpen: true,
         children:
-    <div style={{display: 'flex', gap: '20px'}}>
+    <div style={{ display: 'flex', gap: '20px' }}>
         <button type="button">1</button>
         <input placeholder="2" />
-        <a href="javascript:void(0)" style={{color: 'red'}}>3</a>
+        <a href="javascript:void(0)" style={{ color: 'red' }}>3</a>
         <textarea placeholder="4" />
     </div>,
     },
@@ -29,10 +29,10 @@ export const Dark: Story = {
     args: {
         isOpen: true,
         children:
-    <div style={{display: 'flex', gap: '20px'}}>
+    <div style={{ display: 'flex', gap: '20px' }}>
         <button type="button">1</button>
         <input placeholder="2" />
-        <a href="javascript:void(0)" style={{color: 'red'}}>3</a>
+        <a href="javascript:void(0)" style={{ color: 'red' }}>3</a>
         <textarea placeholder="4" />
     </div>,
     },
