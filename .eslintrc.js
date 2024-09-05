@@ -60,5 +60,11 @@ module.exports = {
                 'react/jsx-no-script-url': 'off',
             },
         },
+        {
+            files: ['**/src/**/*Slice.ts'],
+            rules: {
+                'no-param-reassign': 'off',
+            },
+        },
     ],
 };

@@ -6,6 +6,7 @@
 .Button:focus {
     color: var(--secondary-color);
     outline: none;
+    border-color: var(--secondary-color);
 }
 
 .clear {
