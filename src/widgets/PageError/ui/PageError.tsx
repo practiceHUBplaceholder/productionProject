@@ -17,7 +17,7 @@ export const PageError:FC<PageErrorProps> = ({ className }) => {
         location.reload();
     };
     return (
-        <div className={ClassNames(cls.PageError, {}, [className, theme])}>
+        <div className={ClassNames(cls.PageError, {}, [className, 'app_error', theme])}>
             {/* eslint-disable-next-line i18next/no-literal-string */}
             <p className={cls.emoticon}>(,,&gt;﹏&lt;,,)</p>
             <p>

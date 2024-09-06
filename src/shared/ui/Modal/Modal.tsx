@@ -62,7 +62,7 @@ export const Modal:FC<ModalProps> = ({
                 className={ClassNames(
                     cls.Modal,
                     { [cls.opened]: isOpen },
-                    ['app', theme, className]
+                    ['app_modal', theme, className]
                 )}
             >
                 <div
