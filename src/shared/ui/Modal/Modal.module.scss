@@ -17,9 +17,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    outline: none;
 }
 
 .content {
+    display: flex;
     padding: 20px;
     border-radius: 12px;
     background-color: var(--bg-color);

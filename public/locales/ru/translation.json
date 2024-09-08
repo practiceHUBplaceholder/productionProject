@@ -5,5 +5,7 @@
   "Page-not-found": "Страница не найдена",
   "Unexpected-error": "Произошла непредвиденная ошибка",
   "Refresh-page": "Обновить страницу",
-  "Sign-in": "Войти"
+  "Sign-in": "Войти",
+  "Username": "Имя",
+  "Password": "Пароль"
 }

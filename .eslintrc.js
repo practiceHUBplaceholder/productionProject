@@ -45,6 +45,19 @@ module.exports = {
         }],
         'react-hooks/rules-of-hooks': 'error',
         'react-hooks/exhaustive-deps': 'error',
+        '@typescript-eslint/member-delimiter-style': [
+            'warn',
+            {
+                multiline: {
+                    delimiter: 'semi',
+                    requireLast: true,
+                },
+                singleline: {
+                    delimiter: 'semi',
+                    requireLast: false,
+                },
+            },
+        ],
 
     },
     globals: {

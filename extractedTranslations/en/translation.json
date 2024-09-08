@@ -1,4 +1,5 @@
 {
+  "": "",
   "About": "About",
   "About-us": "About-us",
   "Close": "",
@@ -8,7 +9,10 @@
   "Main-page": "Main-page",
   "Open": "",
   "Page-not-found": "Page-not-found",
+  "Password": "Password",
   "Refresh-page": "Refresh-page",
   "Sign-in": "Sign-in",
-  "Unexpected-error": "Unexpected-error"
+  "Unexpected-error": "Unexpected-error",
+  "Username": "Username",
+  "username": "username"
 }

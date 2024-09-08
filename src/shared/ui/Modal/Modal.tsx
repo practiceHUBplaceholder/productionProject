@@ -11,7 +11,7 @@ interface ModalProps {
     className?: string;
     isOpen: boolean;
     onClose: () => void;
-    portal?: HTMLElement
+    portal?: HTMLElement;
 }
 
 export const Modal:FC<ModalProps> = ({
@@ -70,7 +70,7 @@ export const Modal:FC<ModalProps> = ({
                     ref={overlayRef}
                     className={cls.overlay}
                     tabIndex={-1}
-                    onClick={(e) => {
+                    onMouseDown={(e) => {
                         if (e.currentTarget === e.target) {
                             onClose();
                         }
