@@ -36,7 +36,6 @@ export const Modal:FC<ModalProps> = ({
         }
         if (e.key === 'Tab' && isOpen) {
             const focusable = overlayRef.current.querySelectorAll('input,button,select,textarea');
-
             if (focusable.length) {
                 const first = focusable[0] as HTMLElement;
                 const last = focusable[focusable.length - 1] as HTMLElement;

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/control-has-associated-label */
 /* eslint-disable no-unused-vars */
 import { ButtonHTMLAttributes, FC } from 'react';
 import { ClassNames } from 'shared/lib/classNames/classNames';
@@ -23,29 +24,46 @@ export enum ButtonColor {
   SECONDARY_INVERTED = 'secondaryInverted'
 }
 
+export enum ButtonModal {
+  FIRST = 'first',
+  LAST = 'last'
+}
+
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
   theme?: ButtonTheme;
   square?: boolean;
-  size?: ButtonSize
-  color?: ButtonColor
+  size?: ButtonSize;
+  color?: ButtonColor;
+  disabled?: boolean;
+  modal?: ButtonModal;
 }
 
 export const Button: FC<ButtonProps> = ({
-    className, children, theme = ButtonTheme.CLEAR, square, size = ButtonSize.M, color, ...rest
+    className, children, theme = ButtonTheme.CLEAR,
+    modal,
+    square, size = ButtonSize.M, color, disabled, ...rest
 }) => (
-    <button
-        type="button"
-        className={ClassNames(
-            cls.Button,
-            {
-                [cls.square]: square,
-                [cls[color]]: color,
-            },
-            [className, cls[theme], cls[size]]
-        )}
-        {...rest}
-    >
-        {children}
-    </button>
+    <>
+        {modal === ButtonModal.FIRST
+        && <button type="button" className={cls.fakeBtn} /> }
+        <button
+            type="button"
+            disabled={disabled}
+            className={ClassNames(
+                cls.Button,
+                {
+                    [cls.square]: square,
+                    [cls[color]]: color,
+                    [cls.disabled]: disabled,
+                },
+                [className, cls[theme], cls[size]]
+            )}
+            {...rest}
+        >
+            {children}
+        </button>
+        {modal === ButtonModal.LAST
+        && <button type="button" className={cls.fakeBtn} /> }
+    </>
 );

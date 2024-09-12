@@ -150,3 +150,20 @@ export const SecondaryInvertedDark: Story = {
     },
     decorators: [ThemeDecorator(Theme.DARK)],
 };
+
+export const Disabled: Story = {
+    args: {
+        children: 'Test',
+        theme: ButtonTheme.OUTLINE,
+        disabled: true,
+    },
+};
+
+export const DisabledDark: Story = {
+    args: {
+        children: 'Test',
+        theme: ButtonTheme.OUTLINE,
+        disabled: true,
+    },
+    decorators: [ThemeDecorator(Theme.DARK)],
+};

@@ -89,6 +89,7 @@ export default {
         //   '<rootDir>/__mocks__/fileMock.js',
         '\\.(s?css)$': 'identity-obj-proxy',
         '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
+        '^axios$': 'axios/dist/node/axios.cjs',
     },
 
     // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader

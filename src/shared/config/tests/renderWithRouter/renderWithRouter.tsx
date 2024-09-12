@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 import { MemoryRouter } from 'react-router-dom';
 
 interface renderWithRouterOptions {
-    route: string
+    route: string;
 }
 
 export function renderWithRouter(component: ReactNode, options:

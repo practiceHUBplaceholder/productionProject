@@ -9,6 +9,12 @@
     }
 }
 
+.fakeBtn {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
 .clear {
     margin: 0;
     padding: 0;
@@ -105,4 +111,9 @@
         color: var(--secondary-color);
         border-color: var(--secondary-color);
     }
+}
+
+.disabled {
+    opacity: 0.5;
+    pointer-events: none;
 }

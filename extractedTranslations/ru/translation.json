@@ -2,9 +2,11 @@
   "": "",
   "About": "About",
   "About-us": "About-us",
+  "Authorization-form": "Authorization-form",
   "Close": "Close",
   "Enter": "Enter",
   "Language": "Language",
+  "Log-out": "Log-out",
   "Main": "Main",
   "Main-page": "Main-page",
   "Open": "Open",
@@ -12,7 +14,11 @@
   "Password": "Password",
   "Refresh-page": "Refresh-page",
   "Sign-in": "Sign-in",
+  "Sign-out": "Sign-out",
+  "Sing": "Sing",
+  "Sing-n": "Sing-n",
   "Unexpected-error": "Unexpected-error",
   "Username": "Username",
+  "authorization-form": "authorization-form",
   "username": "username"
 }
