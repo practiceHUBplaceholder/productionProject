@@ -8,7 +8,7 @@ interface loginByUsernameProps {
     password: string;
 }
 
-enum loginErrors {
+export enum loginErrors {
     INVALID = 'Invalid-username-or-password'
 }
 
