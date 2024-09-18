@@ -11,7 +11,7 @@ export const ProfileSlice = createSlice({
     initialState,
     reducers: {
         setAuthData: (state) => {
-            
+
         },
     },
 });
