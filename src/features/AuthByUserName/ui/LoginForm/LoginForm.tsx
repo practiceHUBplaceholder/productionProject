@@ -5,8 +5,9 @@ import { useTranslation } from 'react-i18next';
 import { ClassNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonModal } from 'shared/ui/Button/Button';
 import { Input, InputTheme } from 'shared/ui/Input/Input';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername';
 import { LoginActions } from '../../model/slice/LoginSlice';
 import { getLogin } from '../../model/selectors/getLogin';
@@ -18,7 +19,7 @@ interface LoginFormProps {
 }
 
 export const LoginForm = memo(({ className, isOpen }: LoginFormProps) => {
-    const dispatch = useDispatch();
+    const dispatch = useAppDispatch();
     const {
         username, password, isLoading, error,
     } = useSelector(getLogin);

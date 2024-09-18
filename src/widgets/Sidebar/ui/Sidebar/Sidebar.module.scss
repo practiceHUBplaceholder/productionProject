@@ -19,23 +19,6 @@
     margin-left: calc(var(--sidebar-width-collapsed) / 2 - 25px);
 }
 
-.item {
-    display: flex;
-    gap: 6px;
-    align-items: center;
-    height: 30px;
-}
-
-.icon {
-    fill: var(--inverted-primary-color);
-}
-
-.link {
-    opacity: 1;
-    transition: opacity 0.2s, visibility 0.2s;
-    white-space: nowrap;
-}
-
 .switchers {
     margin-bottom: 12px;
     margin-top: auto;
@@ -58,19 +41,4 @@
 
 .collapsed {
     width: var(--sidebar-width-collapsed);
-
-    .link {
-        opacity: 0;
-        visibility: hidden;
-        width: 0;
-    }
-}
-
-.item:focus .icon {
-    fill: var(--inverted-secondary-color);
-}
-
-.item:focus {
-    outline: none;
-    color: var(--inverted-secondary-color);
 }

@@ -1,22 +1,18 @@
-import { FC, useState } from 'react';
+import { memo, useState } from 'react';
 import { ClassNames } from 'shared/lib/classNames/classNames';
 import { LangSwitcher } from 'shared/ui/LangSwitcher';
 import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher';
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button/Button';
-import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
-import { useTranslation } from 'react-i18next';
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
-import MainIcon from 'shared/assets/icons/main-20-20.svg';
-import AboutIcon from 'shared/assets/icons/about-20-20.svg';
+import { SidebarItemsList } from 'widgets/Sidebar/model/items';
 import cls from './Sidebar.module.scss';
+import { SidebarItem } from '../SidebarItem/SidebarItem';
 
 interface SidebarProps {
   className?: string;
 }
 
-export const Sidebar: FC<SidebarProps> = ({ className }) => {
+export const Sidebar = memo(({ className }: SidebarProps) => {
     const [collapsed, setCollapsed] = useState(true);
-    const { t } = useTranslation('translation');
 
     const onToggle = () => {
         setCollapsed((state) => !state);
@@ -39,14 +35,13 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
                 {collapsed ? '>' : '<'}
             </Button>
             <div className={cls.links}>
-                <AppLink to={RoutePath.main} className={cls.item} theme={AppLinkTheme.SECONDARY}>
-                    <MainIcon className={cls.icon} />
-                    <span className={cls.link}>{t('Main')}</span>
-                </AppLink>
-                <AppLink to={RoutePath.about} theme={AppLinkTheme.SECONDARY} className={cls.item}>
-                    <AboutIcon className={cls.icon} />
-                    <span className={cls.link}>{t('About')}</span>
-                </AppLink>
+                {SidebarItemsList.map((item) => (
+                    <SidebarItem
+                        key={item.path}
+                        item={item}
+                        collapsed={collapsed}
+                    />
+                ))}
             </div>
             <div className={cls.switchers}>
                 <LangSwitcher className={cls.langSwitcher} />
@@ -54,4 +49,4 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
             </div>
         </div>
     );
-};
+});

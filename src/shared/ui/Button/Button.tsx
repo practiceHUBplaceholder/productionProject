@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
 /* eslint-disable no-unused-vars */
-import { ButtonHTMLAttributes, FC } from 'react';
+import { ButtonHTMLAttributes, ReactNode, memo } from 'react';
 import { ClassNames } from 'shared/lib/classNames/classNames';
 import cls from './Button.module.scss';
 
@@ -37,13 +37,14 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   color?: ButtonColor;
   disabled?: boolean;
   modal?: ButtonModal;
+  children?: ReactNode;
 }
 
-export const Button: FC<ButtonProps> = ({
+export const Button = memo(({
     className, children, theme = ButtonTheme.CLEAR,
     modal,
     square, size = ButtonSize.M, color, disabled, ...rest
-}) => (
+}: ButtonProps) => (
     <>
         {modal === ButtonModal.FIRST
         && <button type="button" className={cls.fakeBtn} /> }
@@ -66,4 +67,4 @@ export const Button: FC<ButtonProps> = ({
         {modal === ButtonModal.LAST
         && <button type="button" className={cls.fakeBtn} /> }
     </>
-);
+));
